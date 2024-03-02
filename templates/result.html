@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(226, 211, 211, 1), rgba(224, 218, 218, 0)), url("https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YWdyaWN1bHR1cmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .heading {
+            font-size: 60px;
+            color: #E51515;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .title {
+            font-size: 60px;
+            color: #161616;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(12, 5, 5, 0.5);
+        }
+
+        .link {
+            font-size: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #161616;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .link:hover {
+            color: #E51515;
+        }
+
+        .home-button {
+            text-align: center;
+            margin-top: 0px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading"><b>Prediction</b></h1>
+        <h4 class="title"><b>Crop : {{prediction1}}</b></h4>
+        <h4 class="title"><b>Fertilizer : {{prediction2}}</b></h4>
+        <a href="{{plink}}" class="link"><b>YouTube Link</b></a>
+
+    </div>
+    <div class="home-button">
+        <a href="/">Home</a>
+
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		body {
+			background-image: linear-gradient(rgba(226, 211, 211, 1), rgba(224, 218, 218, 0)),url("https://media.istockphoto.com/id/1249522339/photo/tractor-spray-fertilizer-on-green-field.jpg?s=612x612&w=0&k=20&c=8tyljgHGgTAxrqKnpgsZVWsD-A2tsMRPFaqcErgV62o=");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.home-button {
+            text-align: center;
+            margin-top: 0px;
+            font-size: 30px;
+        }
+	</style>
+</head>
+
+<body>
+	<form method="POST" action="/prediction">
+	<h1 align="center">PUNE</h1>
+	<br>
+	<h2 align="center">
+		<label for="District_Name">District:</label>
+		<select id="District_Name" name="District_Name">
+			<option value="pune">Pune</option>
+		</select>
+	</h2>
+	<br>
+	<h2 align="center">
+		<label for="Soil Colour">Soil Colour:</label>
+		<select id="Soil_Colour" name="soil_color">
+			<option value="6">--Soil Colour--</option>
+			<option value="Black">Black</option>
+			<option value="Red">Red</option>
+			<option value="Dark Brown">Dark Brown</option>
+			<option value="Reddish Brown">Reddish Brown</option>
+
+		</select>
+	</h2>
+
+	<br>
+	<h2 align="center">
+		<label for="Nitrogen">Nitrogen:</label>
+		<select id="Nitogen" name="Nitrogen">
+			<option value="27">--Nitrogen--</option>
+			<option value="20">20</option>
+			<option value="25">25</option>
+			<option value="30">30</option>
+			<option value="35">35</option>
+			<option value="40">40</option>
+			<option value="45">45</option>
+			<option value="50">50</option>
+			<option value="55">55</option>
+			<option value="60">60</option>
+			<option value="65">65</option>
+			<option value="70">70</option>
+			<option value="75">75</option>
+			<option value="80">80</option>
+			<option value="85">85</option>
+			<option value="90">90</option>
+			<option value="95">95</option>
+			<option value="100">100</option>
+			<option value="105">105</option>
+			<option value="110">110</option>
+			<option value="115">115</option>
+			<option value="120">120</option>
+			<option value="125">125</option>
+			<option value="130">130</option>
+			<option value="135">135</option>
+			<option value="140">140</option>
+			<option value="145">145</option>
+			<option value="150">150</option>
+
+		</select>
+	</h2>
+
+	<br>
+
+	<h2 align="center">
+		<label for="Phosphorus">Phosphorus:</label>
+		<select id="Phosphorus" name="Phosphorus">
+			<option value="20">--Phosphorus--</option>
+			<option value="30">30</option>
+			<option value="35">35</option>
+			<option value="40">40</option>
+			<option value="45">45</option>
+			<option value="50">50</option>
+			<option value="55">55</option>
+			<option value="60">60</option>
+			<option value="65">65</option>
+			<option value="70">70</option>
+			<option value="75">75</option>
+			<option value="80">80</option>
+		</select>
+	</h2>
+	<br>
+
+	<h2 align="center">
+
+		<label for="Potassium">Potassium:</label>
+		<select id="Potassium" name="Potassium">
+			<option value="27">--Potassium--</option>
+			<option value="15">15</option>
+			<option value="20">20</option>
+			<option value="25">25</option>
+			<option value="30">30</option>
+			<option value="35">35</option>
+			<option value="40">40</option>
+			<option value="45">45</option>
+			<option value="50">50</option>
+			<option value="55">55</option>
+			<option value="60">60</option>
+			<option value="65">65</option>
+			<option value="70">70</option>
+			<option value="75">75</option>
+			<option value="80">80</option>
+			<option value="85">85</option>
+			<option value="90">90</option>
+			<option value="95">95</option>
+			<option value="100">100</option>
+			<option value="105">105</option>
+			<option value="110">110</option>
+			<option value="115">115</option>
+			<option value="120">120</option>
+			<option value="125">125</option>
+			<option value="130">130</option>
+			<option value="135">135</option>
+			<option value="140">140</option>
+			<option value="145">145</option>
+			<option value="150">150</option>
+
+		</select>
+	</h2>
+	<br>
+
+	<h2 align="center">
+		<label for="pH">pH:</label>
+		<select id="pH" name="pH">
+			<option value="8">--pH--</option>
+			<option value="5.5">5.5</option>
+			<option value="6">6</option>
+			<option value="6.5">6.5</option>
+			<option value="7">7</option>
+			<option value="7.5">7.5</option>
+		</select>
+	</h2>
+	<br>
+
+	<h2 align="center">
+		<label for="Rainfall">Rainfall:</label>
+		<select id="Rainfall" name="Rainfall">
+			<option value="16">--Rainfall--</option>
+			<option value="700">700</option>
+			<option value="800">800</option>
+			<option value="900">900</option>
+			<option value="1000">1000</option>
+			<option value="1100">1100</option>
+			<option value="1200">1200</option>
+			<option value="1300">1300</option>
+			<option value="1400">1400</option>
+		</select>
+	</h2>
+	<br>
+
+	<h2 align="center">
+		<label for="Temprature">Temprature:</label>
+		<select id="Temprature" name="Temperature">
+			<option value="16">--Temprature--</option>
+			<option value="15">15</option>
+			<option value="20">20</option>
+			<option value="25">25</option>
+			<option value="30">30</option>
+			<option value="35">35</option>
+		</select>
+	</h2>
+
+	<br>
+
+	<h2 align="center">
+		<button type="submit">RECOMMEND</button>
+	</h2>
+	<br>
+</div>
+<div class="home-button">
+	<a href="/">Home</a>
+	</form>
+</body>
+
+</html>
