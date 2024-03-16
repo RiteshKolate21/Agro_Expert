@@ -13,7 +13,7 @@
 
     .main {
         width: 100%;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(/static/5.jpg);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(/static/home.jpg);
         background-position: center;
         background-size: cover;
         height: 100vh;
@@ -126,7 +126,8 @@
         height: auto;
         margin: auto;
         color: #fff;
-        position: relative;
+        position: fixed;
+        margin-left: 25%;
     }
 
     .content .par {
@@ -296,8 +297,8 @@
                 <ul>
                     <li><a href="{{ url_for('home') }}">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
-                    <li><a href="{{ url_for('login') }}" class="button">Login</a></li>
-                    <li><a href="{{ url_for('register') }}" class="button">Register</a></li>
+                    <li><a href="{{ url_for('login') }}" class="button">LOGIN</a></li>
+                    <li><a href="{{ url_for('register') }}" class="button">REGISTER</a></li>
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
@@ -316,26 +317,7 @@
 
             <button class="cn"><a href="#">JOIN US</a></button>
 
-            <div class="form">
-                <h2>Login Here</h2>
-                <input type="email" name="email" placeholder="Enter Email Here">
-                <input type="password" name="" placeholder="Enter Password Here">
-                <button class="btnn"><a href="#">Login</a></button>
 
-                <p class="link">Don't have an account<br>
-                    <a href="#">Sign up </a> here</a>
-                </p>
-
-
-                <div class="icons">
-                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-google"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
-                </div>
-
-            </div>
         </div>
     </div>
     </div>

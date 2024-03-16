@@ -7,7 +7,7 @@
     <style>
         .main {
             width: 98%;
-            background: linear-gradient(to top, rgba(44, 44, 44, 0.5)50%, rgba(48, 48, 48, 0.5)50%), url(/static/agro2.jpg);
+            background: linear-gradient(to top, rgba(30, 29, 29, 0.5)50%, rgba(24, 24, 24, 0.5)50%), url(/static/pexels-rocsana-nicoleta-gurza-946186.jpg);
             background-position: center;
             background-size: cover;
             height: 90vh;
@@ -17,6 +17,7 @@
             width: 1200px;
             height: 75px;
             margin: auto;
+            margin-left: 14%;
         }
 
         .icon {
@@ -175,8 +176,8 @@
             height: 340px;
             background: linear-gradient(to top, rgba(24, 24, 24, 0.8)50%, rgba(29, 29, 29, 0.8)50%);
             position: absolute;
-            margin-top: 10%;
-            margin-left: 40%;
+            margin-top: 13%;
+            margin-left: 27%;
             transform: translate(0%, -5%);
             border-radius: 10px;
             padding: 25px;
@@ -289,17 +290,31 @@
 
 <body class="main">
 
-    <form method="POST" action="" class="form">
-        <h2>Login Here</h2>
-        {{ form.hidden_tag() }}
-        {{ form.username }}
-        {{ form.password }}
-        <button class="btnn" {{ form.submit }}Login</button>
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">Agro Expert</h2>
+        </div>
 
-            <br>
-            <br>
-            <h4><a class="link1" href="{{ url_for('register') }}">Don't have an account? Sign Up</a></h4>
-    </form>
+        <div class="menu">
+            <ul>
+                <li><a href="{{ url_for('home') }}">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="{{ url_for('login') }}" class="button">LOGIN</a></li>
+                <li><a href="{{ url_for('register') }}" class="button">REGISTER</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <form method="POST" action="" class="form">
+            <h2>Login Here</h2>
+            {{ form.hidden_tag() }}
+            {{ form.username }}
+            {{ form.password }}
+            <button class="btnn" {{ form.submit }}Login</button>
+
+                <br>
+                <br>
+                <h4><a class="link1" href="{{ url_for('register') }}">Don't have an account? Sign Up</a></h4>
+        </form>
 </body>
 
 </html>
