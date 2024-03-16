@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('/static/agro2.jpg');
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%),url('/static/agro2.jpg');
             background-size: cover;
             background-position: center;
             margin: 0;
@@ -26,32 +26,67 @@
             font-size: 40px;
         }
 
-        form {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 8px;
+        .form {
+            width: 250px;
+            height: auto;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.8) 50%);
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            margin-top: 12%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            padding: 25px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            max-width: 100%;
         }
 
-        input[type="text"],
-        input[type="password"],
+        .form h2 {
+            width: 220px;
+            font-family: sans-serif;
+            text-align: center;
+            color: #ff7200;
+            font-size: 22px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 2px;
+            padding: 8px;
+        }
+
+        .form input {
+            width: 100%;
+            height: 35px;
+            background: transparent;
+            border-bottom: 1px solid #33ff00;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            color: #fff;
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-top: 30px;
+            font-family: sans-serif;
+        }
+
+        .form input:focus {
+            outline: none;
+            background-color: transparent;
+        }
+
+        ::placeholder {
+            color: #fff;
+            font-family: Arial;
+        }
+
         input[type="submit"] {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-
-        input[type="submit"] {
+            height: 40px;
             background-color: #4CAF50;
             color: white;
             border: none;
             cursor: pointer;
+            border-radius: 4px;
+            margin-top: 20px;
+            font-size: 16px;
         }
 
         input[type="submit"]:hover {
@@ -74,9 +109,8 @@
 
 <body>
 
-
-    <form method="POST" action="">
-        <h1>Login Page</h1>
+    <form method="POST" action="" class="form">
+        <h2>Login Here</h2>
         {{ form.hidden_tag() }}
         {{ form.username }}
         {{ form.password }}
@@ -85,9 +119,9 @@
         <!-- <input type="text" placeholder="Username" name="username">
             <input type="password" placeholder="Password" name="password">
             <input type="submit" value="Login"> -->
-        <a href="{{ url_for('register') }}">Don't have an account? Sign Up</a>
+        <br>
+        <br><a href="{{ url_for('register') }}">Don't have an account? Sign Up</a>
     </form>
-
 
 </body>
 
