@@ -13,7 +13,7 @@ import numpy as np
 from sklearn.preprocessing import LabelEncoder
 
 # Agroexpert code STart:
-with open('model.pkl', 'rb') as file:
+with open('model_pickle.pkl', 'rb') as file:
     model = pickle.load(file)
 # Agroexpert code ENd:
     
