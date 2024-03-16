@@ -294,10 +294,10 @@
 
             <div class="menu">
                 <ul>
-                    <li><a href="#">HOME</a></li>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
-                    <li><a href="{{ url_for('login') }}" class="button">Login Page</a></li>
-                    <li><a href="{{ url_for('register') }}" class="button">Register Page</a></li>
+                    <li><a href="{{ url_for('login') }}" class="button">Login</a></li>
+                    <li><a href="{{ url_for('register') }}" class="button">Register</a></li>
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
