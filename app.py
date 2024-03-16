@@ -52,6 +52,10 @@ def pune():
 def solapur():
     return render_template('solapur.html')
 
+@app.route('/crop')
+def crop():
+    return render_template('crop.html')
+
 @app.route('/prediction', methods=['POST','GET'])
 def prediction():
     data = pd.read_csv('Crop and fertilizer dataset.csv')
