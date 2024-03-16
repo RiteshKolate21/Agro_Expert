@@ -73,22 +73,22 @@
 </head>
 
 <body>
-    
+
 
     <form method="POST" action="">
         <h1>Login Page</h1>
-            {{ form.hidden_tag() }}
-            {{ form.username }}
-            {{ form.password }}
-            {{ form.submit }}
-       
+        {{ form.hidden_tag() }}
+        {{ form.username }}
+        {{ form.password }}
+        {{ form.submit }}
+
         <!-- <input type="text" placeholder="Username" name="username">
-        <input type="password" placeholder="Password" name="password">
-        <input type="submit" value="Login"> -->
+            <input type="password" placeholder="Password" name="password">
+            <input type="submit" value="Login"> -->
         <a href="{{ url_for('register') }}">Don't have an account? Sign Up</a>
     </form>
 
-    
+
 </body>
 
 </html>
