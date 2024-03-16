@@ -1,74 +1,142 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+
+@keyframes zoomInAndOut {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .zoom-in-out {
+            display: inline-block;
+            animation: zoomInAndOut 3s forwards; /* Adjust the duration as needed */
+        }
+
+
+@keyframes colorChange {
+            0% {
+                background-color: #3498db;
+            }
+            25% {
+                background-color: #e74c3c;
+            }
+            50% {
+                background-color: #2ecc71;
+            }
+            75% {
+                background-color: #f39c12;
+            }
+            100% {
+                background-color: #3498db;
+            }
+        }
+
+        .color-change {
+            width: 700px;
+            height: 350px;
+            background-color: #3498db; /* Initial background color */
+            text-align: center;
+            line-height: 200px;
+            color: #fff;
+            cursor: pointer;
+            animation: colorChange 5s infinite; /* Animation with a 5-second duration, repeating infinitely */
+        }
+
+
+
+
         body {
-            background-image: linear-gradient(rgba(226, 211, 211, 1), rgba(224, 218, 218, 0)), url("https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YWdyaWN1bHR1cmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin-top: 0;
-            margin-bottom: 0;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 columns */
+            grid-template-rows: 1fr 1fr;    /* 2 rows */
+            height: 100vh; /* Set the height of the container to fill the viewport */
         }
 
-        .heading {
-            font-size: 60px;
-            color: #E51515;
-            text-align: center;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        .box {
+            /* border: 1px solid #000; */
+            padding: 20px;
+            animation: scaleIn 1s ease-in-out;
         }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        /* Additional styling for better visibility */
+        .box:nth-child(odd) {
+            background-color: #f0f0f0;
         }
 
-        .title {
-            font-size: 60px;
-            color: #161616;
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 5px;
-            text-shadow: 2px 2px 4px rgba(12, 5, 5, 0.5);
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
-        .link {
-            font-size: 30px;
-            text-align: center;
-            text-decoration: none;
-            color: #161616;
-            margin-top: 10px;
-            font-weight: bold;
+
+        .row {
+            display:block;
+            height: 300px;
+            justify-content: space-between;
         }
 
-        .link:hover {
-            color: #E51515;
+
+        .crop-image {
+            width: 700px;
+            height: 350px;
+        }
+        .fertilizer-image {
+            width: 700px;
+            height: 350px;
         }
 
-        .home-button {
-            text-align: center;
-            margin-top: 0px;
-            font-size: 30px;
-        }
     </style>
+    <title>2 Columns, 2 Rows with Animation</title>
 </head>
-
 <body>
-    <div class="container">
-        <h1 class="heading"><b>Prediction</b></h1>
-        <h4 class="title"><b>Crop : {{prediction1}}</b></h4>
-        <h4 class="title"><b>Fertilizer : {{prediction2}}</b></h4>
-        <a href="{{plink}}" class="link"><b>YouTube Link</b></a>
+    <div class="box">
+        <div class="color-change">
+            <div class="zoom-in-out" style="font-size: 40px;">
+                <h4>{{prediction1}}   >>>  </h4>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="box">
+        <img class="crop-image" src="/static/crops_images/{{prediction1}}.jpg" alt="{{prediction1}} Image">
 
     </div>
-    <div class="home-button">
-        <a href="/">Home</a>
 
+
+    <div class="box">
+        <img class="fertilizer-image" src="/static/fertillizer/{{prediction2}}.jpg" alt="{{prediction1}} Image">
+    </div>
+
+    <div class="box">
+        <div class="color-change">
+            <div class="zoom-in-out" style="font-size: 40px;">
+                <h4>   <<<   {{prediction2}}</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" >
+        <center><h1>FOR MORE INFO >>>  </h1><a href="{{plink}}" class="link"><b><img src='/static/yt.png' height="200px" width="200px" style="padding-left: 500px;"></b></a></center>
+
+
+
+ 
+</div>
 </body>
-
 </html>
