@@ -12,10 +12,10 @@ import pickle
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 
-# Agroexpert code STart:
+# Agroexpert code Start:
 with open('model_pickle.pkl', 'rb') as file:
     model = pickle.load(file)
-# Agroexpert code ENd:
+# Agroexpert code End:
     
 
 app = Flask(__name__)
@@ -106,6 +106,7 @@ def prediction():
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 app.config['SECRET_KEY'] = 'thisisasecretkey'
+
 
 
 login_manager = LoginManager()
