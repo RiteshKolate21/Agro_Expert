@@ -191,7 +191,7 @@ def register():
         new_user = User(username=form.username.data, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
-        return redirect(url_for('login'))
+        return redirect(url_for('crop'))
 
     return render_template('register.html', form=form)
 
