@@ -95,6 +95,17 @@
             text-align: center;
         }
     </style>
+    <script>
+        function validate()
+        {
+          if (Temperature.value=="NULL" || Soil_Colour.value=="NULL" || Nitrogen.value=="NULL" || Phosphorus.value=="NULL" || Potassium.value=="NULL" || pH.value=="NULL" || Rainfall.value=="NULL")
+          {
+            alert("Please Enter values inside fields");
+            event.preventDefault(); 
+          }
+          
+        }
+        </script>
 </head>
 
 <body>
@@ -113,7 +124,7 @@
         <h2 align="center">
             <label for="Soil Colour">Soil Colour:</label>
             <select id="Soil_Colour" name="soil_color">
-                <option value="6">--Soil Colour--</option>
+                <option value="NULL">--Soil Colour--</option>
                 <option value="Black">Black</option>
                 <option value="Red">Red</option>
             </select>
@@ -122,7 +133,7 @@
         <h2 align="center">
             <label for="Nitrogen">Nitrogen:</label>
             <select id="Nitogen" name="Nitrogen">
-                <option value="27">--Nitrogen--</option>
+                <option value="NULL">--Nitrogen--</option>
                 <option value="15">15</option>
                 <option value="20">20</option>
                 <option value="25">25</option>
@@ -138,7 +149,7 @@
         <h2 align="center">
             <label for="Phosphorus">Phosphorus:</label>
             <select id="Phosphorus" name="Phosphorus">
-                <option value="20">--Phosphorus--</option>
+                <option value="NULL">--Phosphorus--</option>
                 <option value="10">10</option>
                 <option value="15">15</option>
                 <option value="20">20</option>
@@ -165,7 +176,7 @@
 
             <label for="Potassium">Potassium:</label>
             <select id="Potassium" name="Potassium">
-                <option value="27">--Potassium--</option>
+                <option value="NULL">--Potassium--</option>
                 <option value="5">5</option>
                 <option value="10">10</option>
                 <option value="15">15</option>
@@ -204,7 +215,7 @@
         <h2 align="center">
             <label for="pH">pH:</label>
             <select id="pH" name="pH">
-                <option value="8">--pH--</option>
+                <option value="NULL">--pH--</option>
                 <option value="5.5">5.5</option>
                 <option value="6">6</option>
                 <option value="6.5">6.5</option>
@@ -217,7 +228,7 @@
         <h2 align="center">
             <label for="Rainfall">Rainfall:</label>
             <select id="Rainfall" name="Rainfall">
-                <option value="16">--Rainfall--</option>
+                <option value="NULL">--Rainfall--</option>
                 <option value="400">400</option>
                 <option value="500">500</option>
                 <option value="600">600</option>
@@ -235,9 +246,9 @@
         
 
         <h2 align="center">
-            <label for="Temprature">Temprature:</label>
-            <select id="Temprature" name="Temperature">
-                <option value="16">--Temprature--</option>
+            <label for="Temperature">Temprature:</label>
+            <select id="Temperature" name="Temperature">
+                <option value="NULL">--Temperature--</option>
                 <option value="15">15</option>
                 <option value="20">20</option>
                 <option value="25">25</option>
@@ -250,7 +261,7 @@
 	
 	</div>	
         <div class="center">
-            <button type="submit">RECOMMEND</button>
+            <button type="submit" onclick="validate()">RECOMMEND</button>
 			<br>
             <br>
             <a href="/crop">Home</a>
