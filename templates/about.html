@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Agriculture</title>
+    <link rel="stylesheet" href="/templates/style.css">
+
+
+</head>
+<style>
+    /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #52a847;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-links a.active {
+    color: #ffd700; /* Change to your active color */
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('/static/land.jpg'); /* Change to your hero background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Mission Section Styles */
+.mission {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+}
+
+.mission-text {
+    flex: 1;
+    text-align: center;
+}
+
+.mission-image {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Values Section Styles */
+.values {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.values h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.values-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.value {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.value img {
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+.value h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+</style>
+<body>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to Our Agriculture Project</h1>
+            <p>Empowering farmers, sustaining communities</p>
+        </div>
+    </section>
+
+    <section class="mission">
+        <div class="mission-text">
+            <h2>Our Mission</h2>
+            <p>We are dedicated to promoting sustainable agriculture practices, fostering innovation in farming, and empowering farmers to enhance food security and preserve the environment. Our mission is to revolutionize the agriculture sector by integrating technology with traditional farming methods.</p>
+        </div>
+        <img src="/static/farmers.jpg" alt="Farmers" class="mission-image">
+    </section>
+
+    <section class="values">
+        <h2>Our Values</h2>
+        <div class="values-container">
+            <div class="value">
+                <img src="/static/sustainability.png" alt="Sustainability">
+                <h3>Sustainability</h3>
+                <p>We prioritize sustainability in all our agricultural practices, ensuring the long-term health of our ecosystems.</p>
+            </div>
+            <div class="value">
+                <img src="/static/innovation.png" alt="Innovation">
+                <h3>Innovation</h3>
+                <p>We embrace innovation to improve farming efficiency, productivity, and resilience to environmental challenges.</p>
+            </div>
+            <div class="value">
+                <img src="/static/community.png" alt="Community">
+                <h3>Community</h3>
+                <p>We believe in fostering strong, supportive communities of farmers, consumers, and stakeholders.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-text">
+            <p>&copy; 2024 Agriculture Project. All rights reserved.</p>
+            <p>Contact Us: info@agricultureproject.com</p>
+        </div>
+    </footer>
+</body>
+</html>
