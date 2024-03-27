@@ -160,6 +160,10 @@ def home():
 def about():
     return render_template('about.html')
 
+@app.route('/contactus')
+def contactus():
+    return render_template('contactus.html')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
