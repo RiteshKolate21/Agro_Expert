@@ -100,14 +100,12 @@
           var subject = document.querySelector('.contact input[type="text"]').value;
           var message = document.querySelector('.contact textarea').value;
 
-          // Compose email body
           
           var body = "Message: " + message;
 
-          // Encode the email body
           body = encodeURIComponent(body);
 
-          // Redirect to Gmail with prefilled email
+    
           window.location.href = "mailto:parthnilkanthbsiet@gmail.com?subject=Contact%20Form&body=" + body;
         });
       });
