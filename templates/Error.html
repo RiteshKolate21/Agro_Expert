@@ -1,5 +1,68 @@
-<html>
-    <head>
-<h1> Sorry, No crop found for input values , Enter proper Input values</h1>
-    </head>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            background:linear-gradient(to top, rgba(13, 13, 13, 0.5)50%, rgba(16, 15, 15, 0.5)50%),url("/static/agro2.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .error-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>Sorry, No crop found for input values</h1>
+        <p>Please Enter Proper Input Values.</p>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
