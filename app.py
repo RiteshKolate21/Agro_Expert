@@ -89,7 +89,7 @@ def prediction():
             'Temperature': [temperature]
         })
 
-    # Perform the necessary data encoding for the input data (similar to the code you provided)
+    # Perform the necessary data encoding for the input data
         X_categorical = data[['District_Name', 'Soil_color']]
         X_numerical = data[['Nitrogen', 'Phosphorus', 'Potassium', 'pH', 'Rainfall', 'Temperature']]
         categorical_columns = ['District_Name', 'Soil_color']
@@ -189,7 +189,7 @@ def dashboard():
 
 
 @app.route('/logout', methods=['GET', 'POST'])
-@login_required
+@login_required 
 def logout():
     logout_user()
     return redirect(url_for('login'))
