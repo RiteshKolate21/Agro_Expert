@@ -37,9 +37,6 @@ Agro Expert is licensed under the [MIT License](LICENSE).
 
 ---
 
-Feel free to customize this template according to your project's specific features and requirements.
-
-
 
 ![Home](https://github.com/RiteshKolate21/Agro_Expert/assets/132751264/a59ddfc6-60e3-4bdb-a5f8-86493bf0d465)
 ![Registation](https://github.com/RiteshKolate21/Agro_Expert/assets/132751264/ec4b0e1c-9efb-46ac-97c0-c951bcd220e4)
